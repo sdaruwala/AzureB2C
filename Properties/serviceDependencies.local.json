@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "identityapp1": {
-      "connectionInfo": "App registration: GSSNetwork, Tenant: GSSNetworkB2C (gssnetwork.onmicrosoft.com - AAD B2C)",
+      "connectionInfo": "App registration: , Tenant: ",
       "type": "identityapp.default"
     }
   }
