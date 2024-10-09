@@ -1,1 +1,1 @@
-# GSSNetwork
+# Azure B2C Demo
