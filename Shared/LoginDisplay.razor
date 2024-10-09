@@ -1,0 +1,24 @@
+﻿@inject NavigationManager NavigationManager;
+
+<AuthorizeView>
+    <Authorized>
+        Hello, @context.User.Identity?.Name!
+        <a href="#" @onclick="@(() => SignOut())" @onclick:preventDefault>Log out</a>
+    </Authorized>
+    <NotAuthorized>
+        <a href="MicrosoftIdentity/Account/SignIn">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private async Task SignOut()
+    {
+        var returnUrl = NavigationManager.BaseUri; // Redirect to home/index after logout
+        var signOutUrl = $"MicrosoftIdentity/Account/SignOut";
+
+        // Navigate to the sign-out URL
+        NavigationManager.NavigateTo(signOutUrl, true);
+
+        
+    }
+}
